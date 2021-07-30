@@ -7,11 +7,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Document</title>
     <style>
-        .red {
+        option.red {
             background-color:red; 
             font-weight: bold;
             color:coral;
-        }   
+        } 
+        textarea.center {
+            padding: 70px 0;
+            border: 3px solid green;
+            text-align: center;
+        }  
     </style>
     <script>
         
@@ -24,10 +29,21 @@
                 }
             }
         }
+
+        function textfont(){
+            let t = document.getElementById("text");
+            let options_font = document.getElementsByName("optionfont");
+            for(let i=0; i<options_font.length; i++){
+                if(options_font[i].selected){
+                    t.style.fontFamily = options_font[i].value;
+                }
+            }
+        }
     </script>
 </head>
 <body>
-    <br>
+    <center>
+        <br>
         <div class="container">
             <label for="color">Choose your color:</label>
             <select name="color" id="color">
@@ -37,15 +53,25 @@
                 <option class="yellow" name="optioncolor" value="yellow">Yellow</option>
                 <option class="pink" name="optioncolor" value="pink">Pink</option>
             </select>
+        
+            <label for="font">Choose your font:</label>
+            <select name="font" id="font">
+                <option >Select font family</option>
+                <option value="Arial" name="optionfont">Arial</option>
+                <option value="fantasy" name="optionfont">Fantasy</option>
+                <option value="cursive" name="optionfont">Cursive</option>
+            </select>
             <br>
-            <button onclick="textColor()" id="colorSubmit">Select</button>
+            
+            <button alignment="left" onclick="textColor(); textfont()" id="colorSubmit">Select</button>
         </div>
-        <br><br>
+        <br>
 
         <div class="container">
-            <label for="text">Please type your article:</label><br>
-            <textarea id="text" name="text" id="text" rows="4" cols="50"></textarea>
+            <label for="text">Please type your text:</label><br>
+            <textarea class="center" id="text" name="text" id="text" rows="4" cols="50"></textarea>
         </div>
+     </center>
         
         
 </body>

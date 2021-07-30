@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <p id="p">Head:Chooser your color</p>
+        <input type="color" name="head" id="head" value="#ff6666">
+        <label for="head">Select color for the head</label>
+    </div>
+
+    <div class="container">
+        <input type="color" name="body" id="body" value="#0066ff">
+        <label for="body">Select color for the body</label>
+        <p id="b">Select body color</p>
+    </div>
+    
+    <script>
+        let head = document.getElementById("head");
+        let p = document.getElementById("p");
+        head.addEventListener('change', function(){
+            p.style.color = head.value;
+        });
+
+        let body = document.getElementById("body");
+        let b = document.getElementById("b");
+        body.addEventListener('change', function(){
+            b.innerHTML = body.value;
+            b.style.color = body.value;
+        });
+        
+    </script>
+</body>
+</html>

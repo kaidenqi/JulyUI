@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
     <link href='https://fonts.googleapis.com/css?family=Montez|Lobster|Josefin+Sans|Shadows+Into+Light|Pacifico|Amatic+SC:700|Orbitron:400,900|Rokkitt|Righteous|Dancing+Script:700|Bangers|Chewy|Sigmar+One|Architects+Daughter|Abril+Fatface|Covered+By+Your+Grace|Kaushan+Script|Gloria+Hallelujah|Satisfy|Lobster+Two:700|Comfortaa:700|Cinzel|Courgette'
     rel='stylesheet' type='text/css'>
     <title>Document</title>
@@ -31,30 +31,7 @@
             text-align: center;
         }  
     </style>
-    <script>
-        function textColor(){
-            let t = document.getElementById("text");
-            let options_color = document.getElementsByName("optioncolor");
-            for(let i=0; i<options_color.length; i++){
-                if(options_color[i].selected){
-                    t.style.color = options_color[i].value;
-                }
-            }
-        }
-
-        let fonts = ["Montez", "Lobster", "Josefin Sans", "Shadows Into Light", "Pacifico", "Amatic SC", "Orbitron", "Rokkitt", "Righteous", "Dancing Script", "Bangers", "Chewy", "Sigmar One", "Architects Daughter", "Abril Fatface", "Covered By Your Grace", "Kaushan Script", "Gloria Hallelujah", "Satisfy", "Lobster Two", "Comfortaa", "Cinzel", "Courgette"];
-        let fontSelector = document.getElementById("font");
-        for (let i = 0; i < fonts.length; i++) {
-            let opt = document.createElement('option');
-            opt.value = opt.innerHTML = opt.style.fontFamily = fonts[i];
-            fontSelector.add(opt);
-        }
-
-        let t = document.getElementById("text");
-        selectList.onchange = function fonthandler(e){
-            t.style.fontFamily = e.target.value;
-        }
-    </script>
+    
 </head>
 <body>
     <center>
@@ -82,6 +59,32 @@
             <textarea class="center" id="text" name="text" id="text" rows="4" cols="50"></textarea>
         </div>
      </center>
+
+     <script>
+        function textColor(){
+            let t = document.getElementById("text");
+            let options_color = document.getElementsByName("optioncolor");
+            for(let i=0; i<options_color.length; i++){
+                if(options_color[i].selected){
+                    t.style.color = options_color[i].value;
+                }
+            }
+        }
+
+        let fonts = ["Montez", "Lobster", "Josefin Sans", "Shadows Into Light", "Pacifico", "Amatic SC", "Orbitron", "Rokkitt", "Righteous", "Dancing Script", "Bangers", "Chewy", "Sigmar One", "Architects Daughter", "Abril Fatface", "Covered By Your Grace", "Kaushan Script", "Gloria Hallelujah", "Satisfy", "Lobster Two", "Comfortaa", "Cinzel", "Courgette"];
+        let fontSelector = document.getElementById("font");
+        for (let i = 0; i < fonts.length; i++) {
+            let opt = document.createElement('option');
+            opt.value = opt.innerHTML = fonts[i];
+            opt.style.fontFamily = fonts[i];
+            fontSelector.add(opt);
+        }
+
+        let t = document.getElementById("text");
+        fontSelector.onchange = function fonthandler(e){
+            t.style.fontFamily = e.target.value;
+        }
+    </script>
         
         
 </body>

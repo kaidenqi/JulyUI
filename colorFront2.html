@@ -42,14 +42,17 @@
             }
         }
 
-        function textfont(){
-            let t = document.getElementById("text");
-            let options_font = document.getElementsByName("optionfont");
-            for(let i=0; i<options_font.length; i++){
-                if(options_font[i].selected){
-                    t.style.fontFamily = options_font[i].value;
-                }
-            }
+        let fonts = ["Montez", "Lobster", "Josefin Sans", "Shadows Into Light", "Pacifico", "Amatic SC", "Orbitron", "Rokkitt", "Righteous", "Dancing Script", "Bangers", "Chewy", "Sigmar One", "Architects Daughter", "Abril Fatface", "Covered By Your Grace", "Kaushan Script", "Gloria Hallelujah", "Satisfy", "Lobster Two", "Comfortaa", "Cinzel", "Courgette"];
+        let fontSelector = document.getElementById("font");
+        for (let i = 0; i < fonts.length; i++) {
+            let opt = document.createElement('option');
+            opt.value = opt.innerHTML = opt.style.fontFamily = fonts[i];
+            fontSelector.add(opt);
+        }
+
+        let t = document.getElementById("text");
+        selectList.onchange = function fonthandler(e){
+            t.style.fontFamily = e.target.value;
         }
     </script>
 </head>
@@ -65,18 +68,12 @@
                 <option class="yellow" name="optioncolor" value="yellow">Yellow</option>
                 <option class="pink" name="optioncolor" value="pink">Pink</option>
             </select>
-            <!-- <input type="color"/> -->
-        
-            <label for="font">Choose your font:</label>
-            <select name="font" id="font">
-                <option >Select font family</option>
-                <option style="font-family:arial" value="Arial" name="optionfont">Arial</option>
-                <option style="font-family:fantasy" value="fantasy" name="optionfont">Fantasy</option>
-                <option style="font-family:cursive" value="cursive" name="optionfont">Cursive</option>
-            </select>
-            <br>
             
-            <button alignment="left" onclick="textColor(); textfont()" id="colorSubmit">Select</button>
+            <label for="select">Select</label>
+            <select name="select" id="font"></select>
+            <br />
+            
+            <button alignment="left" onclick="textColor()" id="colorSubmit">Select</button>
         </div>
         <br>
 

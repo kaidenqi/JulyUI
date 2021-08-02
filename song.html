@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .red {
+      /* border: 2px solid red; */
+      background-color: red;
+      width: 50px;
+    }
+
+    .blue {
+      background-color: blue;
+      width: 50px;
+    }
+
+    .pink {
+      background-color: pink;
+      width: 50px;
+    }
+  </style>
+  <link
+    href='https://fonts.googleapis.com/css?family=Montez|Lobster|Josefin+Sans|Shadows+Into+Light|Pacifico|Amatic+SC:700|Orbitron:400,900|Rokkitt|Righteous|Dancing+Script:700|Bangers|Chewy|Sigmar+One|Architects+Daughter|Abril+Fatface|Covered+By+Your+Grace|Kaushan+Script|Gloria+Hallelujah|Satisfy|Lobster+Two:700|Comfortaa:700|Cinzel|Courgette'
+    rel='stylesheet' type='text/css'>
+  <title>Homework</title>
+</head>
+
+<body>
+  <label for="color">Color</label>
+  <!-- <input type="color" name="color" /> -->
+  <select name="color" id="color">
+    <option value="red" class="red">
+      red
+    </option>
+    <option value="blue" class="blue">
+      blue
+    </option>
+    <option value="pink" class="pink">
+      pink
+    </option>
+  </select>
+  <label for="select">Select</label>
+  <select name="select" id="font">
+  </select>
+  <br />
+  <textarea name="textarea" id="textarea" style="width:500px; height:300px; resize:none; font-size: large;"
+    placeholder="Please type here...."></textarea>
+
+  <script>
+    let fonts = ["Montez", "Lobster", "Josefin Sans", "Shadows Into Light", "Pacifico", "Amatic SC", "Orbitron", "Rokkitt", "Righteous", "Dancing Script", "Bangers", "Chewy", "Sigmar One", "Architects Daughter", "Abril Fatface", "Covered By Your Grace", "Kaushan Script", "Gloria Hallelujah", "Satisfy", "Lobster Two", "Comfortaa", "Cinzel", "Courgette"];
+    let colorInput = document.getElementById("color");
+    console.dir(colorInput.value);
+    let fontSelector = document.getElementById("font");
+    console.dir(fontSelector);
+    for (let a = 0; a < fonts.length; a++) {
+      let opt = document.createElement('option');
+      opt.value = opt.innerHTML = fonts[a];
+      opt.style.fontFamily = fonts[a];
+      fontSelector.add(opt);
+    }
+    let textarea = document.querySelector('textarea');
+    // console.dir(textarea);
+    colorInput.onchange = function colorHandler(e) {
+      // console.log(e.target.value);
+      textarea.style.color = e.target.value;
+    }
+    fontSelector.onchange = function fontHandler(e) {
+      // console.log(e.target.value);
+      textarea.style.fontFamily = e.target.value;
+    }
+  </script>
+</body>
+
+</html>

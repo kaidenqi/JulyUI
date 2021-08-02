@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <form oninput="amount.value = (principal.valueAsNumber * rate.valueAsNumber)/100">
+        <fieldset>
+            <legend style="font-weight: bold;">Interest Calculator</legend>
+
+            <label for="principal">Amount to Invest:$</label>
+            <input type="number" min="0" value="1000" id="principal">
+
+            
+            <p><label for="rate">Interest Rate:</label></p>
+            <input type="range" min="0" max="20" value="0" id="rate" oninput="thisRate.value=rate.value">
+
+            <output name="thisRate" for="rate">0</output><span>%</span>
+            <p>
+                Interest Received:<strong>$<output id="amount" name="amount">0</output></strong>
+            </p>
+
+        </fieldset>
+    </form>
+</body>
+</html>

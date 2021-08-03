@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>hello</h1>
+    <p id="p"></p>
+    <script>
+        var binaryGap = function(n) {
+            while(n % 2 == 0)
+                    n = parseInt(n/2);
+                
+                let ans = 0;
+                let cur = 0;
+                
+                while (n>0){
+                    let remain = n%2;
+                    if(remain == 0){
+                        cur++;
+                    }
+                    else {
+                        ans = Math.max(ans, cur);
+                        cur = 1;
+                    }
+                    n = parseInt(n/2);       
+                }
+                return ans; 
+        };
+
+        let rel = binaryGap(9);
+       
+        let d = document.getElementsByTagName('p');
+        d.innerHTML = rel;
+        console.log(d.innerHTML);
+    
+       
+    </script>
+
+    </div>
+    
+    
+</body>
+</html>

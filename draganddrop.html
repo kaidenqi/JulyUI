@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <p 
+        style="border:1px solid red" 
+        id="drag1" draggable="true" 
+        ondragstart="drag(event)"> Dragabble content</p>
+        
+        <p 
+        style="border:1px solid black" 
+        id="drop1" ondragover="allowDrop(event)" 
+        ondrop="drop(event)"> The place to be dropped</p>
+    </div>
+    
+    <script>
+        function drag(ev){
+            ev.dataTransfer.setData("text", ev.target.id);
+            //console.log("drag" + ev.target.id);
+        }
+
+        function allowDrop(ev){
+            ev.preventDefault();
+        }
+
+        function drop(ev){
+            ev.preventDefault();
+            let data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+            //console.log("drop" + ev.target.id);
+        }
+   </script>
+    
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+         body{
+             font-family: Verdana, Geneva, Tahoma, sans-serif;
+         }
+         .container{
+             background-color: #eee;
+             width:700px;
+             margin:70px 0 0 50px;
+             display: grid;
+             grid-template-columns: repeat(3,1fr);
+             grid-template-rows: 150px 150px;
+
+             grid-gap: 15px 20px;
+             /* grid-row-gap: 15px;
+             grid-column-gap: 20px; */
+         }
+         .item1{
+             background-color:palevioletred;
+             /* grid-row-start:2;
+             grid-row-end:3; */
+             
+             /* grid-column-start:3;
+             grid-column-end: 4; */
+
+             /* grid-row: 2/3;
+             grid-column:3/4; */
+
+             grid-area:2/3/3/4;
+             grid-column:2/3;
+
+         }
+         .item2{
+             background-color: yellowgreen;
+             
+         }
+         .item3{
+             background-color: slateblue;
+             
+         }
+         .item4{
+             background-color: orangered;
+             
+         }
+         .item5{
+             background-color: hotpink;
+             
+         }
+         .item6{
+             background-color: royalblue;
+             grid-column:3/4;
+             
+         }
+     </style>
+</head>
+<body>
+    <h1>CSS GRID</h1>
+
+    <div class="container">
+        <div class="item item1">First</div>
+        <div class="item item2">Second</div>
+        <div class="item item3">Third</div>
+        <div class="item item4">Fourth</div>
+        <div class="item item5">Fifth</div>
+        <div class="item item6">Sixth</div>
+    </div>
+</body>
+</html>

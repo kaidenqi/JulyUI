@@ -134,3 +134,11 @@ Training
 Blog
 About
 Loading complete
+
+
+
+how will you make your image responsive
+reset CSS？
+flex layout?
+vh vw
+initial-scale=1.0

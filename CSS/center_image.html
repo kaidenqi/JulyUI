@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body{
+            font-size:x-large;
+            font-family: 'Courier New', Courier, monospace;
+        }
         .container{
             position: absolute;
             width: 100%;
@@ -16,7 +20,7 @@
         }
         @media screen and (max-width:500px) {
             .container{
-                align-items: flex-end;
+                flex-direction: column;
             }
         }
     </style>
@@ -24,6 +28,7 @@
 <body>
     <div class="container">
         <img src="../canvas/images/alex.jpg" alt="Portrait image here">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
     </div>
 </body>
 </html>

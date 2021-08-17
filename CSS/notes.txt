@@ -1,0 +1,136 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@kaidenqi 
+pamuba
+/
+JulyUI
+1
+0
+0
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+JulyUI/CSS/notes.txt
+@pamuba
+pamuba 91
+Latest commit ed93d90 yesterday
+ History
+ 1 contributor
+93 lines (69 sloc)  1.41 KB
+  
+A. Simple selectors(tag, id, class)
+
+B. Combinators
+1. descendant selector (space)
+2. child selector (>)
+3. adjacent sibling (+)
+4. general sibling selector (~) 
+
+C. Pseudo-class selectors(selection is based on the state of an element)
+1. :first-child 
+2. :first-of-type(:nth-of-type(1))
+3. in-range
+4. invalid
+5. last-child
+6. nth-child(n)
+7. nth-last-child(n)
+8. nth-last-of-type(n)
+9. nth-of-type(n)
+10. only-child
+11. only-of-type
+12 . :read-only
+
+
+D. Pseudo elements
+13. ::after
+14. ::before
+15. ::first-letter
+
+
+block
+inline-block
+inline
+
+max-width  vs width
+
+justify-content: Main Axis
+
+Align Items : Cross Axis
+*flex-start, end, center
+basline
+stretch
+
+Align Content(justify-conten+Align Items): aligns the content across the cross axis
+** Multiple rows 
+
+shrink depends on:
+content
+other elements around it
+default:1
+
+///////////////////////////////////////
+
+.item{
+    flex-grow:2,
+    flex-shrink:5,
+    flex-basis:200px
+}
+
+.item{
+    flex: 2 5 200px
+}
+
+.item{
+    flex: 0 1 auto;
+}
+
+///////////////////////////
+//One value, unit less=> flex-grow
+flex:2;
+
+//One value, width/height => flex-basis
+flex:10em
+
+//Two values, flex-grow  flex-basis
+flex:1 30px
+
+//Twp values,  flex grow  flex-shrink
+flex:2 2;
+//
+flex: 2 2 50%
+
+
+default value for align-self : auto
+
+align-items from parent will be inherited if there is no align self 
+for the individual items
+
+
+///scenarios
+1. menu
+2. center align
+3. variable height
+4. Holy Grail Layout
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Loading complete

@@ -142,3 +142,8 @@ reset CSS？
 flex layout?
 vh vw
 initial-scale=1.0
+
+display:inline-block
+vertical-align:top这个起作用需要上面这一个配合
+
+capture/bubbling up:方向相反

@@ -1,0 +1,16 @@
+Angular JS:
+1. still using
+2. foundamental version
+
+
+
+Framework: tools(auto tools, compiler, testing, depennedency)
+Libary: when you use routings, you have to download other libraries
+
+Benifits of Agular JS:
+1. DI(Vehicle, Engine: Engine is a dependecy for a vehicle)
+2. 2 way data binding(view <--> controller)
+3. e2e(workflow)
+4. MVC
+5. Directives filters services
+

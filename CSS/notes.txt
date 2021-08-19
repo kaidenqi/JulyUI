@@ -143,7 +143,8 @@ flex layout?
 vh vw
 initial-scale=1.0
 
-display:inline-block
+display:inline-block:Displays an element as an inline-level block container. 
+The element itself is formatted as an inline element, but you can apply height and width values
 vertical-align:top这个起作用需要上面这一个配合
 
 capture/bubbling up:方向相反

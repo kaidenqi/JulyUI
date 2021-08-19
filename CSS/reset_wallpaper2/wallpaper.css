@@ -33,10 +33,166 @@ html {
     position: fixed;
 }
 
-.contact a{
+a{
     color:currentColor;
     cursor: pointer;
     text-decoration: none; 
 }
 
+/* content 是一个container，把他设置成flex之后，
+flexbox里面的模块的default排列方式是按照row排列，
+所以加上display:flex之后，文字就会跑到图片旁边去 */
+.content{
+    display: flex;
+    position: relative;
+    min-height: 100vh;
+}
+.side{
+    max-height: 20rem;
+    max-width: 20rem;
+}
 
+.about{
+    max-width: 26rem;
+}
+
+/* 4. responsiveness */
+@media screen and (max-width:699px) {
+    .content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding:5rem;
+    }
+
+    .side{
+        margin-bottom: 4rem;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .content {
+    align-items: center;
+    justify-content: space-around;
+    justify-content: space-evenly;
+    padding: 4rem;
+    }
+    .side {
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 20rem;
+    margin-left: 4rem;
+    order: 2;
+    width: 20rem;
+    }
+    .about {
+    flex-grow: 1;
+    flex-shrink: 1;
+    }
+}
+
+/* 主要目的是加display:block, 然后就可以加高宽 */
+.wallpaper,
+.picture-shadow,
+.picture-image {
+display: block;
+height: 100%;
+left: 0;
+top: 0;
+width:100%;
+}
+
+/* make the image square */
+.picture {
+padding-top: 100%;
+position: relative;
+width: 100%;
+}
+
+.picture-shadow {
+    border-radius: 2000000px;
+    background-image: radial-gradient(#000 30%, rgba(0, 0, 0, 0) 70%);
+    position: absolute;
+    top: 10%;
+ }
+ .picture-image {
+    border-radius: 200000px;
+    position: absolute;
+ }
+
+ .name{
+     font-size: 2.5rem;
+     margin-bottom: 1rem;
+     text-transform: uppercase;
+ }
+
+ .job, .button {
+    font-family: "Montserrat";
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    }
+
+    .job{
+        color:#ffe479;
+        font-size:0.75rem;
+        letter-spacing: 0.1em;
+    }
+
+    hr {
+        background-color:aliceblue;
+        border:none;
+        /* content: ""; */
+        height: 2px;
+        margin-bottom: 1.5rem;
+        margin-top: 1.5rem;
+        /* transform-origin: left; */
+        width: 100%;
+    }
+
+    .description{
+        font-size: large;
+    }
+
+    .contact{
+        display: inline-block;
+        margin-top: 1.5rem;
+        vertical-align: top;
+    }
+
+.button,
+.social a {
+transform-origin: center;
+transition-duration: 100ms;
+}
+
+.button {
+    background-color: #fff;
+    border-radius: 290486px;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    color: #560e96;
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: bold;
+    line-height: 1;
+    padding: 1.25em 2em;
+    text-shadow: none;
+    transition-property: box-shadow, transform;
+    /* user-select: none; */
+    vertical-align: top;
+    /* white-space: nowrap; */
+    /* will-change: box-shadow, transform; */
+    }
+
+/* 加点动画：box-shadow让box有一点影子
+transform改变盒子的位置，看起来有动画 */
+ .button:hover {
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.9);
+    transform: scale(1.02) translateY(-4px);
+ }
+/* scale>1盒子变大，<1盒子变小 */
+
+ .button:active{
+    box-shadow: 0 1.5rem 3rem rgba(15, 86, 99, 0.9);
+    transform: scale(.98) translateY(-2px);
+ }

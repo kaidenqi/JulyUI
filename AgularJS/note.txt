@@ -14,3 +14,7 @@ Benifits of Agular JS:
 4. MVC
 5. Directives filters services
 
+
+Directives extend HTML
+
+data-src

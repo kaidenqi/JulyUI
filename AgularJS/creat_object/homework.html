@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
+    <script>
+        // **************Creating Objects
+        // 1. creating object with a countructor
+        function car(name, maker, engine){
+            this.name = name;
+            this.maker = maker;
+            this.engine = engine;
+        }
+        let myCar = new car('m6', 'mazda', 'countructor-787');
+        console.log(myCar.engine);
+
+        // 2.using object literals
+        let myCar1 = {
+            name : 'm7',
+            maker: 'BMW',
+            engine: 'literals-787'
+        };
+        console.log(myCar1.engine);
+
+        // 3. using Object.create()
+        let myCar2 = Object.create(myCar1);
+        myCar2.name = 'm8';
+        myCar2.maker = 'GM';
+        myCar2.engine = 'create()-787';
+        console.log(myCar2.engine);
+
+        // 4.using es6 class
+        class Car{
+            constructor(name, maker, engine){
+                this.name = name;
+                this.maker = maker;
+                this.engine = engine;
+            }
+        }
+        let myCar3 = new Car('GT', 'BMW', 'calss-787');
+        console.log(myCar3.engine);
+
+        // ******************************************
+
+        // What's the difference between window.load and DOMContentLoaded?
+        
+        // The DOMContentLoaded event is fired when the document has been completely loaded and parsed, 
+        // without waiting for stylesheets, images, and subframes to finish loading.
+
+        // Load event is fired when all the images and subframes finished loading.
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

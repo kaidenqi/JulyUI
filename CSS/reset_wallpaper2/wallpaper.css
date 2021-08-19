@@ -57,21 +57,20 @@ flexbox里面的模块的default排列方式是按照row排列，
 }
 
 /* 4. responsiveness */
-@media screen and (max-width:699px) {
+@media screen and (max-width: 719px) {
     .content{
         flex-direction: column;
         justify-content: center;
         align-items: center;
         padding:5rem;
     }
-
     .side{
         margin-bottom: 4rem;
         width: 100%;
     }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 720px) {
     .content {
     align-items: center;
     justify-content: space-around;
@@ -96,23 +95,25 @@ flexbox里面的模块的default排列方式是按照row排列，
 .wallpaper,
 .picture-shadow,
 .picture-image {
-display: block;
-height: 100%;
-left: 0;
-top: 0;
-width:100%;
+    display: block;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width:100%;
 }
 
 /* make the image square */
 .picture {
-padding-top: 100%;
-position: relative;
-width: 100%;
+    /* padding-top:100% 是父亲(side)宽度的100% */
+    padding-top: 100%;
+    position: relative;
+    width: 100%; 
+    /* width:100% 是父亲(side)宽度的100% */
 }
-
+/* boxshadow比较好用 */
 .picture-shadow {
     border-radius: 2000000px;
-    background-image: radial-gradient(#000 30%, rgba(0, 0, 0, 0) 70%);
+    background-image: radial-gradient(#000 40%, rgba(206, 80, 80, 0) 70%);
     position: absolute;
     top: 10%;
  }
@@ -120,6 +121,8 @@ width: 100%;
     border-radius: 200000px;
     position: absolute;
  }
+ /* absolute is relative to its first non-static parent
+ 子绝父相（父亲只要不是static就可以） */
 
  .name{
      font-size: 2.5rem;

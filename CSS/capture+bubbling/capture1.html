@@ -49,9 +49,13 @@
         div3 = document.getElementById("div3")
 
         // div1.addEventListener("click", (evt)=>{alert("div1 clicked");evt.stopPropagation();}, true)//true : capturing works, false capturing is turned off
-        div1.addEventListener("click", (evt)=>{alert("div1 clicked")}, false)
-        div2.addEventListener("click", (evt)=>{alert("div2 clicked")}, false)
-        div3.addEventListener("click", (evt)=>{alert("div3 clicked")}, false)
+        div1.addEventListener("click", (evt)=>{alert("div1 capture clicked")}, true)
+        div2.addEventListener("click", (evt)=>{alert("div2 capture clicked")}, true)
+        div3.addEventListener("click", (evt)=>{alert("div3 capture clicked")}, true)
+
+        div1.addEventListener("click", (evt)=>{alert("div1 bubble clicked")}, false)
+        div2.addEventListener("click", (evt)=>{alert("div2 bubble clicked")}, false)
+        div3.addEventListener("click", (evt)=>{alert("div3 bubble clicked")}, false)
     </script>
 </body>
 </html>

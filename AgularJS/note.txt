@@ -17,4 +17,13 @@ Benifits of Agular JS:
 
 Directives extend HTML
 
-data-src
+data-src:The data-* attribute is used to store custom data private to the page or application.
+
+// ******************************************
+
+        // What's the difference between window.load and DOMContentLoaded?
+        
+        // The DOMContentLoaded event is fired when the document has been completely loaded and parsed, 
+        // without waiting for stylesheets, images, and subframes to finish loading.
+
+        // Load event is fired when all the images and subframes finished loading.

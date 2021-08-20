@@ -27,3 +27,30 @@ data-src:The data-* attribute is used to store custom data private to the page o
         // without waiting for stylesheets, images, and subframes to finish loading.
 
         // Load event is fired when all the images and subframes finished loading.
+
+
+module:feature implementation of the project(directives, controllers, services...)
+-container(directives, controllers, services...)
+
+1. module
+2. controllers
+3. ng-app
+4. $scope
+5. ng-src
+6. ng-controllers
+7. 2 way data binding
+8. {{ }} interpolation .... 1 way data binding
+9. ng-model ... 2 way data binding
+10. ng-repeat
+11. Events
+12. filters/pipes
+
+
+AngularJS > [()] is used to do 2 way binding in Angular
+
+babel:JS compiler
+class in html -> compiler -> load into DOM -> CLASS 变 Object
+
+watcher:
+how many watchers? depends on how many data bindings。
+机器自动安排了watcher给某些变量，但是我们还是可以自己再设置watcher去观察这些变量。

@@ -54,3 +54,9 @@ class in html -> compiler -> load into DOM -> CLASS 变 Object
 watcher:
 how many watchers? depends on how many data bindings。
 机器自动安排了watcher给某些变量，但是我们还是可以自己再设置watcher去观察这些变量。
+
+
+digest process vs angularjs context
+
+ng-view is the place we can inject different components depending on routings.
+#！后面跟具体的route

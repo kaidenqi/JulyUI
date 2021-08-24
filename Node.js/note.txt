@@ -1,0 +1,7 @@
+Why node.js? It is fast!
+1. muti threding
+2. cross platform
+3. oop
+4. npm
+5. models
+6. socket programming

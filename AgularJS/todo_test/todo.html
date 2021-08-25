@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todoApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.10/ngStorage.min.js"></script>
+    <link rel="stylesheet" href="todo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Dancing+Script&family=Kalam:wght@400;700&family=Pacifico&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <script src='todo.js'></script>
+    <title>To-do-list</title>
+</head>
+<body>
+    <!-- <div class="jumbotron"> -->
+    <div class="container">
+        <div ng-controller="todoList" >
+            <h2 class='header'><strong style="color: azure; align-items: center;">To-do-list</strong></h2>
+            
+            <form ng-submit="addTodo()">
+                <input type="text" ng-model="newtodo" placeholder="Add new to-do" required>
+                <button type="submit" class="btn btn-primary glyphicon glyphicon-plus">Add</button>
+            </form>
+            
+            <ul>
+                <li ng-repeat="todo in todos" class='item'>
+                    <input type="checkbox" ng-model="todo.done">
+                    <span ng-class="{'done':todo.done}">{{todo.title}}</span>
+                </li>
+            </ul>
+            <button class="btn btn-primary glyphicon glyphicon-plus" ng-click='removeToDo()' >Clear Completed</button>
+        </div> 
+    </div>
+</body>
+</html>

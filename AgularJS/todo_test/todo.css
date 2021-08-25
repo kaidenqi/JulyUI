@@ -1,0 +1,45 @@
+
+    body{
+        padding: 0; 
+        margin: 0;
+        background-color: rgba(0,0,0,0.1);
+        font-family: 'Titillium Web', sans-serif;
+    }
+    .container{
+        padding:10px;
+        width:400px;
+        margin:2rem auto;
+        border: 1rem solid skyblue;
+}
+    .header{
+        width: 350px;
+        height:200px;
+        background-image: url('ben.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        border-radius: 15px 15px 0 0;
+        position: relative;
+        font-family: 'Dancing Script', cursive;
+        
+    }
+    strong{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .item{
+        width:380px;
+        height: 45px;
+        min-height: 45px;
+        position: relative;
+        /* border-bottom: solid rgba(0,0,0,0.1); */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-family: 'Architects Daughter', cursive;
+        font-size: x-large;
+    }
+    

@@ -5,3 +5,19 @@ Why node.js? It is fast!
 4. npm
 5. models
 6. socket programming
+
+use npm to install third party packages such as express
+Express is a framework for Node
+
+
+high water mark?
+readStream
+readableStream:read data from the stream
+
+
+error handling:
+1. synchro: try catch
+2. asynchro: callbacks
+3. emit on error event?
+4. using domain?
+5. cluster

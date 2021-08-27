@@ -8,16 +8,17 @@ http.createServer(function(req, res){
             fs.createReadStream(__dirname+"/index.html")
               .pipe(res)
         }
-        else if(req.url === '/cat'){
-            fs.readFile(__dirname+'/image/cat.jpg', function(err, data){
+        else if(req.url === '/tennis'){
+            fs.readFile(__dirname+'/image/tennis.jpg', function(err, data){
                 if(err){
                     console.log(err.message)
                 }
                 else{
                     res.writeHead(200,{'Content-Type':'text/html'});
-                    res.write('<div style="display:flex"><img style="height:200px; width:400px" src="data:image/jpg;base64,')
+                    res.write('<div style="width: 100%; height: 100%; position:absolute; display:flex; justify-content:center; align-items:center"><img style="display:block; height:400px; width:400px" src="data:image/jpg; base64,')
                     res.write(Buffer.from(data).toString('base64'));
                     res.write('"/></div>')
+                    console.log(data);
                 }
             })
         }

@@ -8,6 +8,7 @@ http.createServer(function(req, res){
             fs.createReadStream(__dirname+"/index.html")
               .pipe(res)
         }
+        //assignment:3. Move the image to the center of the page in NodeServer.
         else if(req.url === '/tennis'){
             fs.readFile(__dirname+'/image/tennis.jpg', function(err, data){
                 if(err){
@@ -32,9 +33,18 @@ http.createServer(function(req, res){
 
             res.end(JSON.stringify(obj))
         }
+        //assignment: 4. Display error messages to the client
         else{
-            res.writeHead(404);
-            res.end();
+            fs.readFile('./404.html',(err,data)=>{
+                if(err){
+                    console.log(err);
+                    res.end();       
+                }
+                else{
+                    res.write(data);
+                    res.end();
+                }
+            })
         }
 
 

@@ -21,3 +21,132 @@ error handling:
 3. emit on error event?
 4. using domain?
 5. cluster
+
+
+
+time slicing, 课件-EventModel
+neflex is based on NodeJS
+
+asynchro vs non-blocking
+
+var obj = {
+    int 
+    string
+    float
+    fun()
+}
+RDBMS VS Mongodb
+RDBMS: data is related in many ways. relationship exist not
+only within the table but also between tables. It is slow.
+
+Non-relation DB: no structure in the database. It is fast.
+
+db 
+show dbs 
+db.employee.insert({"name":""Max})
+db.dropDatabase()
+
+//create a collection
+use test2
+db.createCollection("employee")
+db.employee.insert({"name":""Max})
+
+//show all collections
+show collections 
+
+//drop collectiondb.employee.drop()
+
+//sample data
+[
+{
+ "StudentNo":"1",
+ "FirsName":"Mark",
+ "LastName":"Waugh",
+ "Age":10
+},
+{
+ "StudentNo":"2",
+ "FirsName":"Mel",
+ "LastName":"Gibson",
+ "Age":17
+},
+{
+ "StudentNo":"3",
+ "FirsName":"Dino",
+ "LastName":"Sorous",
+ "Age":40
+},
+{
+ "StudentNo":"4",
+ "FirsName":"Chris",
+ "LastName":"Trippy",
+ "Age":12
+},
+{
+ "StudentNo":"5",
+ "FirsName":"Shay",
+ "LastName":"Watson",
+ "Age":15
+},
+{
+ "StudentNo":"6",
+ "FirsName":"Katy",
+ "LastName":"en",
+ "Age":13
+},
+{
+ "StudentNo":"7",
+ "FirsName":"July",
+ "LastName":"Maria",
+ "Age":16
+},
+{
+ "StudentNo":"8",
+ "FirsName":"Denny",
+ "LastName":"Don",
+ "Age":16
+}
+]
+
+
+//insert data 
+db.Students.insert(
+[
+    {
+    "StudentNo":"8",
+    "FirsName":"Denny",
+    "LastName":"Don",
+    "Age":16
+    },
+    {
+    "StudentNo":"7",
+    "FirsName":"July",
+    "LastName":"Maria",
+    "Age":16
+    }
+]
+)
+
+//fetch all records 
+db.Students.find()
+
+//fetch the first one
+db.Students.findOne()
+
+db.Students.find({"StudentNo":"2"})
+
+//$gt (greater than) $gte 
+db.Students.find({
+    "Age":{$gt:15}
+})
+
+
+//AND 
+db.Students.find({
+    {"firsName":"Mark", "Age":20}
+})
+
+//OR
+db.Students.find({
+    $or[{"firsName":"Mark"}, {"Age":20}]
+})

@@ -27,7 +27,17 @@ error handling:
 time slicing, 课件-EventModel
 neflex is based on NodeJS
 
-asynchro vs non-blocking
+
+Asynchronous VS Non-Blocking
+
+1) Asynchronous does not respond immediately, While Nonblocking responds immediately if the 
+data is available and if not that simply returns an error.
+2) Asynchronous improves the efficiency by doing the task fast as the response might come later, 
+meanwhile, can do complete other tasks. 
+Nonblocking does not block any execution and if the data is available it retrieves the information quickly.
+3) Asynchronous is the opposite of synchronous while nonblocking I/O is the opposite of blocking. 
+They both are fairly similar but they are also different as asynchronous is used with 
+a broader range of operations while nonblocking is mostly used with I/O.
 
 var obj = {
     int 
@@ -54,7 +64,8 @@ db.employee.insert({"name":""Max})
 //show all collections
 show collections 
 
-//drop collectiondb.employee.drop()
+//drop collection
+db.employee.drop()
 
 //sample data
 [
@@ -150,3 +161,92 @@ db.Students.find({
 db.Students.find({
     $or[{"firsName":"Mark"}, {"Age":20}]
 })
+
+db.Students.find({
+    "FirsName":“Mark”, $or:[{"Age":"15"}, {"Age":20}]
+})
+
+//update
+
+
+//and + or
+
+db.students.find(
+{
+   "FirsName":"Mark", $or:[{"Age":"15"},{"Age":"16"}]
+}
+)
+
+db.students.update(
+    {"_id":ObjectId("60e47a5a79312c6721aee8b2")},
+    {$set:{"FirsName":"Mary"}}
+)
+
+db.students.update(
+    {"Age":40},
+    {$set:{"FirsName":"Mel"}},
+    {multi:true}
+)
+
+
+db.students.save(
+    {"_id":ObjectId("60e47a5a79312c6721aee8b2"), "FirsName":"Mary",
+     "StudentNo":123, "LastName":"Smith", "Age":789
+   }
+    
+)
+
+
+
+
+**************
+
+//schema
+db.createCollection( "people2" , {
+   validator: {
+     $jsonSchema: {
+        bsonType: "object",
+        additionalProperties: false,
+		required: ["name","age"],
+        properties: {
+           _id : {
+              bsonType: "objectId" },
+           name: {
+              bsonType: "string",
+              description: "required and must be a string" },
+           age: {
+              bsonType: "int",
+              minimum: 0,
+              maximum: 100,
+              description: "required and must be in the range 0-100" }
+        }
+     }
+}})
+
+
+**************
+
+db.runCommand( { collMod: "people3", 
+   validator: { 
+      $jsonSchema : { 
+         bsonType: "object", 
+         required: [ "name", "surname", "gender" ], 
+         properties: { 
+            name: { 
+               bsonType: "string", 
+               description: "required and must be a string" }, 
+            surname: { 
+               bsonType: "string", 
+               description: "required and must be a string" }, 
+            gender: { 
+               enum: [ "M", "F" ], 
+               description: "required and must be M or F" } 
+         }
+       }
+}, 
+validationLevel: "moderate", 
+validationAction: "warn" 
+})
+
+**************
+index????????

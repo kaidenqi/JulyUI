@@ -1,0 +1,123 @@
+db
+use test1
+db.employee.insert({"name":"Max"})
+show dbs
+db.getCollection("Employee").find({})
+use test1
+db.createCollection("Songs")
+db.Songs.insert({"name":"Hero"})
+db.getCollection("Songs").find()
+show collections
+db.Songs.drop()
+db.Songs.insert({
+ "StudentNo":"1",
+ "FirsName":"Mark",
+ "LastName":"Waugh",
+ "Age":10
+})
+use test1
+db.createCollection("Students")
+db.Students.insert([
+{
+ "StudentNo":"1",
+ "FirsName":"Mark",
+ "LastName":"Waugh",
+ "Age":10
+},
+{
+ "StudentNo":"2",
+ "FirsName":"Mel",
+ "LastName":"Gibson",
+ "Age":17
+},
+{
+ "StudentNo":"3",
+ "FirsName":"Dino",
+ "LastName":"Sorous",
+ "Age":40
+},
+{
+ "StudentNo":"4",
+ "FirsName":"Chris",
+ "LastName":"Trippy",
+ "Age":12
+},
+{
+ "StudentNo":"5",
+ "FirsName":"Shay",
+ "LastName":"Watson",
+ "Age":15
+},
+{
+ "StudentNo":"6",
+ "FirsName":"Katy",
+ "LastName":"en",
+ "Age":13
+},
+{
+ "StudentNo":"7",
+ "FirsName":"July",
+ "LastName":"Maria",
+ "Age":16
+},
+{
+ "StudentNo":"8",
+ "FirsName":"Denny",
+ "LastName":"Don",
+ "Age":16
+}
+])
+
+db.Students.find({"StudentNo":"8"})
+db.Students.find({"Age":16}, {"Age":13})
+db.Students.find({"Age":13})
+db.Students.find(
+    {$or:[{"Age":16}, {"Age":15}]}
+)
+db.Students.find(
+    {"StudentNo":"8", $or:[{"Age":16}, {"Age":15}]}
+)
+db.Students.update(
+    {"_id":ObjectId("612d5e19ca867278644a29f6")},
+    {$set:{"FirsName":"Kai"}}
+)
+db.Students.find({"FirsName":"Kai"})
+db.Students.find()
+db.Students.save(
+{"_id":ObjectId("612d5e19ca867278644a29f6"),
+"StudentNo":"83",
+ "FirsName":"Dan",
+ "LastName":"Green",
+ "Age":25}
+ )
+ db.Students.find({"Age":{$gt:13}}).pretty()
+  db.Students.find({"Age":{$gt:13}}).count()
+  db.Students.explain("executionStats").find({"Age":{$gt:13}})
+  db.Students.createIndex({"Age":1})
+
+
+
+
+db.createCollection("students2", {
+   validator: {
+      $jsonSchema: {
+         bsonType: "object",
+         required: [ "name", "year" ],
+         properties: {
+            name: {
+               bsonType: "string",
+               description: "must be a string and is required"
+            },
+            year: {
+               bsonType: "int",
+               minimum: 2017,
+               maximum: 3017,
+               description: "must be an integer in [ 2017, 3017 ] and is required"
+            }
+         }
+      }
+   }
+})
+
+db.students2.insert({name:"Jim", year:NumberInt(2017)})
+//一定注意添加int时的转换

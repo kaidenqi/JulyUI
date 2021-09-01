@@ -64,3 +64,44 @@ command:
 browserify main.js -o bundle.js
 
 gulf watch 能够实现automation
+
+
+gulp
+
+
+1.gulp-jshint
+ dependency = jshint
+
+
+2. minify and rename css files
+  gulp-rename
+  gulp-clean-css
+
+3. sass compile + minify + rename
+   gulp-sass(4.1.0)
+ 
+4. sass compile + minify + rename + autoprefixer + sourcemaps
+   gulp-sourcemaps(3.0.0)
+   gulp-autoprefixer(7.0.1)
+   
+   关于prefix：
+   H5：HTML5
+   C3 : CSS3
+   webkit是google chorome 的前缀
+
+5. transpile babelify + minify + rename + autoprefixer + sourcemaps
+   babel-core@6.26.3
+   babel-preset-env@1.7.0
+   babelify@8.0.0
+   browserify@17.0.0
+   vinyl-buffer@1.0.1
+   vinyl-source-stream@2.0.0
+   gulp-uglify@3.0.2
+
+6. image minifivation
+   gulp-imagemin
+
+   
+
+
+   

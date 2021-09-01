@@ -1,0 +1,3 @@
+
+how to refresh the page?
+1.write a refresh function to refetch the data.

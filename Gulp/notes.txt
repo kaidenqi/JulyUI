@@ -1,0 +1,66 @@
+Gulp runs on NodeJS
+
+jshint
+npm i jshint
+
+main.js:
+var now;
+
+gulp --tasks -g
+
+*****************************************
+function showMilitaryTime(){
+    if(document.theForm.showMilitary[0].checked){
+        return true;
+    }
+    return false;
+}
+
+function showTheHours(theHour){
+    if(showMilitaryTime() || (theHour > 0 && theHour < 13)){
+        return(theHour);
+    }
+    if(theHour == 0){
+        return(12);
+    }
+    return (theHour-12);
+}
+function showZeroFilled(inValue){
+    if(inValue > 9){
+        return ":"+inValue;
+    }
+    return ":0"+inValue;
+}
+function showAmPm(){
+    if(showMilitaryTime()){
+        return("");
+    }
+    if(now.getHours()<12){
+        return ("am");
+    }
+    return ("pm");
+}
+function showTheTime(){
+    now=new Date();
+    document.theForm.showTime.value = 
+    showTheHours(now.getHours()) +
+    showZeroFilled(now.getMinutes())+
+    showZeroFilled(now.getSeconds())+
+    showAmPm();
+    setTimeout("showTheTime();", 1000);
+}
+*****************************************
+
+？？？？？？？？？？？？？？？？？？？？？？？？？
+？？？？？？？？？？？？？？？？？？？？？？？？？
+sass?scss?
+bable??因为版本不同？浏览器版本不同？JS版本不同？
+caniuse.com??
+boundle??
+broswerify??
+Now recursively bundle up all the required modules starting 
+at main.js into a single file called bundle.js with the browserify 
+command:
+browserify main.js -o bundle.js
+
+gulf watch 能够实现automation

@@ -20,6 +20,9 @@ grunt-contrib-uglify
 // css minify
 grunt-contrib-cssmin
 
+//image minify
+grunt-contrib-imagemin
+
 
 
 -configure the tasks

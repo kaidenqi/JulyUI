@@ -1,0 +1,30 @@
+Grunt - task runner
+1. install grunt-cli globally
+npm i -g grunt-cli
+2. create package.json
+npm init -y
+3. install grunt
+npm i -D grunt
+4. create the grunt file
+
+//concatenating css and js files
+npm install grunt-contrib-concat --save-dev
+
+//minify css
+grunt-sass
+node-sass
+
+//js uglify
+grunt-contrib-uglify
+
+// css minify
+grunt-contrib-cssmin
+
+
+
+-configure the tasks
+-load the plugins
+-register the tasks
+
+cli:
+grunt concat:js

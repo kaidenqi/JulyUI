@@ -81,12 +81,6 @@ module.exports = function(grunt){
 
     grunt.registerTask('concat-js',['concat:js']);
     grunt.registerTask('concat-css',['concat:css']);
-    // grunt.registerTask('sass', ['sass']);
-    // grunt.registerTask('imagemin', ['imagemin']);
-    // grunt.registerTask('uglify', ['uglify']);
-    // grunt.registerTask('cssmin', ['cssmin']);
     
-
-    // grunt.registerTask('all',['concat-js', 'concat-css','cssmin','sass','imagemin','uglify']);
     grunt.registerTask('all',['concat-js', 'concat-css']);
 }

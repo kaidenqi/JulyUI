@@ -1,3 +1,5 @@
+Grunt不同于gulp，grunt是同步的。
+
 Grunt - task runner
 1. install grunt-cli globally
 npm i -g grunt-cli

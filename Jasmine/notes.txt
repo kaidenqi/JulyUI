@@ -1,0 +1,10 @@
+
+
+setUp(before-runs befor all test, beforeEach-runns before each test)
+Tear down(afterEach)
+
+toBe:check the reference
+toEqual: check the content
+
+travis cl
+tdd

@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/kaidenqi/Day1-html/issues"
   },
-  "homepage": "https://github.com/kaidenqi/Day1-html#readme"
+  "homepage": "https://github.com/kaidenqi/Day1-html#readme",
+  "dependencies": {
+    "mongodb": "^4.1.1"
+  }
 }

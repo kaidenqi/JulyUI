@@ -9,3 +9,5 @@ we need to update the request
 
 gulp webpack grunt
 jasmine
+
+debug and optimize

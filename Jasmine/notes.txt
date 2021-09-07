@@ -1,3 +1,10 @@
+SetUp(beforeAll-runs before all test, beforeEach-runs before each test) 
+Tear Down(afterAll-runs after all tests, afterEach-runs before each test)
+
+
+ASync testing
+Code Coverage
+CI pipeline
 
 
 setUp(before-runs befor all test, beforeEach-runns before each test)

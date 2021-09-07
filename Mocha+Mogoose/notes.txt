@@ -1,2 +1,13 @@
 
+Jasmine VS Mocha?
+Test framework VS test runner?
+package VS package-lock?
+dependency VS devdependency?
 
+
+
+
+
+
+//对project进行测试时，命令行如下
+npm run test 

@@ -1,13 +1,31 @@
 
-Jasmine VS Mocha?
+Jasmine VS Mocha VS Chai?
+They are both test framework.(beforEach, describe, it...)
+Chai is assertion library(expect, exist)
+
 Test framework VS test runner?
+https://amzotti.github.io/testing/2015/03/16/what-is-the-difference-between-a-test-runner-testing-framework-assertion-library-and-a-testing-plugin/
+
 package VS package-lock?
+不好说清楚
+
 dependency VS devdependency?
+不好说清楚
+dependency are modules which are required during runtime.
+devdependency are modules which are required during development.
 
 
 
 
 
-
+******************************************
 //对project进行测试时，命令行如下
 npm run test 
+
+//package.json里面有脚本
+"scripts": {
+    "test": "mocha"
+  },
+
+所以，“npm run test” 可以用“_npx mocha” 来代替
+******************************************

@@ -11,7 +11,7 @@ mongoose.Promise = global.Promise;
 
 //run before all the tests 
 before(function(done){
-    mongoose.connect("mongodb://localhost:27017/mocha");
+    mongoose.connect("mongodb://localhost:27017/mocha"); //mocha 是 database
     mongoose.connection.once('open', ()=>{
         log(chalk.green.inverse('Connection has been made!!!'))
         done();

@@ -7,5 +7,6 @@ const GameSchema = new Schema({
     weight:Number
 });
 
+// create a Model
 const GameChar = mongoose.model('gamechar', GameSchema)
 module.exports =  GameChar;

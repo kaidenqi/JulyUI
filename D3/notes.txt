@@ -1,0 +1,25 @@
+D3
+HighChart
+
+
+D3
+*******************
+不需要npm任何包，去官网找CDN链接
+D3 API are JS functions
+
+
+面试问题：
+enter update exit selections:
+Enter, exit: create new nodes for incoming data and 
+remove outgoing nodes that are no longer needed.
+Updating nodes are the default selection—the result of the data operator. 
+
+
+csv文件
+
+string => number in JS
+Number(string)
+
+d3.max
+d3.min
+

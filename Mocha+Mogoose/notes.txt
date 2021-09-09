@@ -29,3 +29,11 @@ npm run test
 
 所以，“npm run test” 可以用“_npx mocha” 来代替
 ******************************************
+
+
+findOne 需要await，promise知识
+
+
+mongoose?
+mongoose is an Object modeling tool for MongoDB.
+It help programmer model their data.

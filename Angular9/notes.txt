@@ -1,0 +1,24 @@
+
+
+CLI: command line interface
+version of CLI depends on version of angular
+
+What is angular9?
+Angular is a platform and framework for building cliennt 
+side SPA.
+Written in TS
+Angular9 released on 7th Feb 2020.
+Angular9 supports Ivy Engine.
+Support Bazel script(entire build script is written bazel)
+Maintained by Google.
+
+version 9.1.15
+1 year = 2 releases
+Major Version = every 6 months
+Minor = 2-3 months
+patch-frequent every week 
+
+how to retract your code if there are some errors?
+
+first file to run?
+main.ts 

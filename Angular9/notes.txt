@@ -22,3 +22,86 @@ how to retract your code if there are some errors?
 
 first file to run?
 main.ts 
+
+modules: feature
+
+
+
+
+
+absolute route 
+relative route
+child route
+postman
+
+ng new app --routings
+
+解决前端后端port不一样问题：
+npm install cors
+
+ng g pipe customPipeName
+
+
+************老师的notes***************
+************
+module: Feature implementation in a project
+components, services, pipes...etc
+
+User module:
+login com
+logout com
+user service
+
+create a module: ng g module todo
+ng g c pending --module todo
+OR
+cd ./src/app/todo
+ng g c done
+
+
+create a component: ng g c task
+
+Property Binding:
+Attribute and value are not the same
+Attribute - HTML
+Property - DOM
+
+Attributes are used to inintialize the DOM Properties 
+Attribute are immutable
+Properties can be changed
+
+
+Interpolation is great for string values
+to bind other data types like boolean we need property Binding
+
+
+Class Binding: CSS classes
+class=""  [class]=""
+
+Any one not both
+
+() are used for event binding
+
+template refrence variable
+
+Angular Material
+
+ngSwitch
+
+ngFor
+
+pipes
+
+custom pipes
+
+services
+
+DRY
+SRP
+
+HTTP Calls
+
+Service:
+Component in angular is resposible for the UI, not for 
+fetching data. So we need service to fetch data.
+

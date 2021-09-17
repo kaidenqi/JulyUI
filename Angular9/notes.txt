@@ -41,6 +41,21 @@ npm install cors
 
 ng g pipe customPipeName
 
+jwt:
+npm i jsonwebtoken
+
+ng g guard routerguard
+
+agular http intercepters
+
+how to handle different errors
+
+
+
+ng-template vs ng-content:
+ng-template: directive
+content projection
+
 
 ************老师的notes***************
 ************
@@ -96,12 +111,14 @@ custom pipes
 
 services
 
-DRY
-SRP
+DRY: don't repeat your code
+SRP: single responsibility principle
 
 HTTP Calls
 
 Service:
-Component in angular is resposible for the UI, not for 
-fetching data. So we need service to fetch data.
+Component in angular is resposible for the UI(i.e.,display the data),
+not for fetching data. So we need service to fetch data.
+
+we often use service for the backend, for example: fetch data, process data, filter data.
 

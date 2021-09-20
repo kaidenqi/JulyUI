@@ -56,6 +56,8 @@ ng-template vs ng-content:
 ng-template: directive
 content projection
 
+ng g pipe safe
+
 
 ************老师的notes***************
 ************

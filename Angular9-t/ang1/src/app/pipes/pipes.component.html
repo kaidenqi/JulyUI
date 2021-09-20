@@ -1,0 +1,36 @@
+<!-- <h2>{{name}}</h2>
+<h2>{{name | lowercase}}</h2>
+
+<h2>{{name | uppercase}}</h2>
+<h2>{{name | titlecase}}</h2>
+<h2>{{name | slice:3:6}}</h2>
+
+<h2>{{5.678 | number:'2.2-3'}}</h2>
+<h2>{{5.678 | number:'3.4-5'}}</h2>
+<h2>{{5.678 | number:'1.1-2'}}</h2>
+
+<h2>{{5.678 | currency:'EUR'}}</h2>
+<h2>{{5.678 | currency:'USD'}}</h2>
+
+<h2>{{date}}</h2>
+<h2>{{date | date:'short'}}</h2>
+<h2>{{date | date:'shortDate'}}</h2>
+<h2>{{date | date:'shortTime'}}</h2>
+<h2>{{date | date:'MMM, dd yyyy'}}</h2>
+
+<code>
+    {{ user | json }}
+</code>
+<h2>
+    {{ user.DOB | date:"MMMM" | uppercase}}
+</h2>
+
+<h2>
+    {{user.city | customPipe:user.city}}
+</h2> -->
+
+<ul>
+    <li *ngFor="let user of users">
+        <div [innerHTML]="user.city | customPipe:user.city"></div>
+    </li>
+</ul>

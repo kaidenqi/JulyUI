@@ -1,0 +1,15 @@
+npm i jest
+
+TDD vs BDD?
+Write minimum code for passing the test
+
+npm run test
+jest --watchAll
+
+spy VS mock in jest
+
+unit test: i have to run the app by myself.
+integration test: I don't have to run the app by myself
+然后用postman进行mannully测试
+
+await 后面是promise

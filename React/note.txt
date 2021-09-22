@@ -1,0 +1,10 @@
+a tool to write front-end fast
+
+declarative
+
+react only focus on the UI
+
+npx create-react-app demoName
+
+rce:short cut
+rc:react counstruvtor

@@ -3,7 +3,7 @@ import './App.css';
 import Message from './components/Message';
 import NameList from './components/NameList';
 import ParentComponent from './components/ParenntChild.js/ParentComponent';
-import ParentC from './components/ParenntChild.js/Memo.js/ParentC';
+import ParentC from './components/Memo.js/ParentC'
 
 
 function App() {

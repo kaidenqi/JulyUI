@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import ChildC from './ChildC'
 
 
-class ParentComp extends Component {
+class ParentC extends Component {
     constructor(props) {
         super(props)
     
@@ -30,4 +30,4 @@ class ParentComp extends Component {
     }
 }
 
-export default ParentComp
+export default ParentC

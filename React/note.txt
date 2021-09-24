@@ -9,6 +9,7 @@ npx create-react-app demoName
 rce:short cut
 rfce
 rc:react counstruvtor
+rconst
 https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets
 
 React class & function component 的区别：
@@ -17,4 +18,8 @@ https://www.cnblogs.com/chrissong/p/10445191.html
 how to prevennt rerenderinng of component in react?
 pureComponnent
 
+
+modal window
+
+context API
 

@@ -23,3 +23,139 @@ modal window
 
 context API
 
+Class Component(es6 classes)
+1. Maintain their own private data - state
+
+Person(name, age)
+person(name="" , age="")
+
+2. Lifecycle hooks
+
+Function Components(simple functions)
+1. No state(can implement state using hooks)
+2. No this
+3. Use fn components as much as possible
+
+16.4 alpha - hooks
+
+JSX = Javascript XML(extension to JS language syntex)
+1. Write XML-like code for elements and components
+2. JSX - tag names, attributes, children
+3. JSX is not necessary to write REACT appliations
+4. Code becomes simple and elegent
+5. JSX ultimately transpiles to pure JS which is undesttod by the browsers
+
+PROPS:
+1. Every componet receives one props object
+2. Props are Immutable
+
+
+STATE:
+1. Class has state , now function componet can have state(useState hook)
+2. state can be changed
+
+**why we need to bind the this keyword inside a function
+**Because the function is called by the component
+
+
+class test{
+
+  draw = () => {
+      //pen
+      this.pen = red;
+  }
+
+}
+
+Method as props : 
+
+Conditional Rendering 
+1. if/else
+2. Element Variables
+3. Ternary conditional operator
+4. Short circuit operator
+
+
+List + Keys
+
+Styling React Components
+1. CSS Stylesheets
+2. Inline Styling
+3. CSS Modules
+4. CSS in JS Libraries
+5. Pure Component
+
+Shallow Comparison:
+Primitive Types:
+a (SC) b rtun true if a and b have the same value + of same Types
+
+Complex Types:
+a (SC) b retuns true if a and b reference the same exact object
+
+
+Pure Comp vs Reg Comp
+RC - shouldComponentUpdate always retuns TRUE
+
+PC - shouldComponentUpdate for performing SC , true/false
+
+Lifecycle Stages:
+1. Mounting - When an instance of a component is being created and inserted into the DOM
+2. Updating - Whne a component is being re-rendered as a result of changes to either props or state
+3. Unmounting - When a component is being removed from the DOM
+4. Error handling - When there is an error during rendering, in a lifecycle method,
+                    or in the constructor of any child component
+
+Mounting: 
+1. constructor(props) - sp fn that runs when we create a component, initialize state, binding the event handlers,
+                 do not cause any side effects, HTTP request, super(props)-directlyoverwrites the this.state
+2. static getDerivedStateFromProps - 'this' is not allowed inside, set the state, do not cause side effects
+
+3. render - only required function, reads props and state and return JSX, do not chnage the state or interact  with DOM or
+            make ajax calls, children components lifeycle methods are also executed
+
+4. componentDidMount - when the compnent and all its children have been rendered to the DOM
+                       can cause side effects
+
+Updating:
+https://zh-hans.reactjs.org/docs/react-component.html
+
+1. static getDerivedStateFromProps - method is executed every time a component is re rendered, set the state,
+                                    do not cause side effects
+2. shouldComponentUpdate(nextProps, nextState) - preformance optimization, do not cause side effects
+
+3. render
+
+4. getSnapshotBeforeUpdate(prevProps, prevState) - called right before the changes from the virtual DOM 
+                                                    are to be reflected, capture some information fro the DOM,
+                                                    this either return null or return a vlaue,
+                                                    Returned value will be passed as a third parameter to the next method.,
+5. componentDidUpdate(prevProps, prevState, snapshot) - called after the render is finished in the re render cycles
+                                                        can cause side effects
+side effect什么意思？
+对应的反面是纯函数，纯函数就是：传入的参数一样，输出结果一定一样。
+side effect就是做了跟本身return 一个值无关的事情，比如：ajax call。
+首先解释纯函数（Pure function）：给一个 function 相同的参数，永远会返回相同的值，并且没有副作用；这个概念拿到 React 中，就是给一个 Pure component 相同的 props, 永远渲染出相同的视图，并且没有其他的副作用；纯组件的好处是，容易监测数据变化、容易测试、提高渲染性能等；
+副作用（Side Effect）是指一个 function 做了和本身运算返回值无关的事，比如：修改了全局变量、修改了传入的参数、甚至是 console.log()，所以 ajax 操作，修改 dom 都是算作副作用的；
+
+Unmounting:
+1. componentWillUnmount
+
+Error handling:
+1. static getDerivedStateFromError - is used to render a fallback UI after an error is thrown
+2. componentDidCatch - method id used to log error information
+
+Error Boundary - A class component that implements either one or both of the lifecycle methods.
+                getDerivedStateFromError or componentDidCatch becomes an error boundary
+
+HOC = > const newComponent = higherOrderComponent(originalComponent)
+
+const IronMan = withSuit(TonyStark)
+
+Context API, redux, flux
+Context provides a way to pass data through the component tree
+without having to pass props down manually at every level
+
+1. Create the Context
+2. Provide the context value
+3. consume the context value
+

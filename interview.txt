@@ -1,0 +1,20 @@
+CSS HTML5 JS(JQuery) : how to use jquery to make ajax call? what's the difference?
+
+NodeJS
+gulp grunt webpack
+
+React
+-hook + lifecycle hooks
+-redux
+-context API
+-flux
+-saga
+-thunk
+-router
+
+react native
+
+CI/CD
+
+JIRA
+github

@@ -1,0 +1,50 @@
+npm i redux@4.0.4
+npm i redux-logger
+
+All the reducers are called when actions come
+
+default props？？？？？？？？？
+ownProps
+
+Redux is predictable state container for JS  applications
+Redux is not tied to react
+Can be used with Angular, Vue, JS
+Redux is a lib for JS applicaions
+
+**state of the application can change
+todo ->(item-pending)->(item-done)
+
+all state transitions are explicit and we can also track them
+above makes the application staet predictable
+
+3 CORE concepts:
+Store - Cake shop
+Action - describes the action  INTENTION to BUY_CAKE
+Reducer - shopkeeper(ties the store and the action)
+
+Store - a store holds the state of ur applicaion
+reducer - actuaaly carries out th state transitions dependening on the action
+
+
+3 PRINCIPALS
+1. The state of ur application is stored in an object tree within the single store
+2. The only way to change the state is to emit an action, an object that describes the action 
+3. to specify how the store tree changes , we write pure reducers
+
+Redux Store
+1. Holds app state
+2. Allows access to state via getState()
+3. Allows state to be updated vis dispatch(action)
+4. Register listeners via subscribe(listener)
+5. Hanldle unregistering of listeners via the function returned by subscribe(listener)
+
+
+Are all reducers called when an action came to store?
+
+
+middlewares: logging, crash reporting, performing async tasks
+
+axios: http calls 
+redux-thunk:
+Define async creators
+applied middlewares

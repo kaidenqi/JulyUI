@@ -1,5 +1,5 @@
 import React from 'react'
-import { buyCake } from '../redux'
+import { buyCake } from '../redux'  //引入的action
 import { connect } from 'react-redux'
 
 //props 指向App.js里传过来的props，就是store

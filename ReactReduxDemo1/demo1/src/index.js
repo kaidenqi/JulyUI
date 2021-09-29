@@ -4,11 +4,11 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals';
 
-import App2 from './App2';
+import CustomTextInput from './CustomTextInput'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App2 />
+    <CustomTextInput />
   </React.StrictMode>,
   document.getElementById('root')
 );
